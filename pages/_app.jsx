@@ -1,10 +1,12 @@
-import UserProvider from '../context/userContext'
+import '../styles/fonts.css'
+import '../styles/globals.css'
+import AuthProvider from '../context/authContext'
 
 // Custom App to wrap it with context provider
 export default function App({ Component, pageProps }) {
   return (
-    <UserProvider>
+    <AuthProvider>
       <Component {...pageProps} />
-    </UserProvider>
+    </AuthProvider>
   )
 }
