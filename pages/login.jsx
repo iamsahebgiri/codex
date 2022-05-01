@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Button from "@/components/Button";
-import Checkbox from "@/components/Checkbox";
-import Guest from "@/layouts/Guest";
-import Input from "@/components/Input";
-import Label from "@/components/Label";
+import Button from "@/components/button";
+import Checkbox from "@/components/checkbox";
+import Guest from "@/layouts/guest";
+import Input from "@/components/input";
+import Label from "@/components/label";
 import Link from "next/link";
 import { useAuth } from "context/authContext";
 import { useForm } from "react-hook-form";
@@ -22,7 +22,7 @@ export default function Login() {
   const [processing, setProcessing] = useState(false);
   const [error, setError] = useState(null);
 
-  const handleRegistration = async ({ name, email, password }) => {
+  const handleRegistration = async ({ email, password }) => {
     setProcessing(true);
     login(email, password)
       .then((user) => {

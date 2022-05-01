@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
-import Button from "@/components/Button";
-import Guest from "@/layouts/Guest";
-import Input from "@/components/Input";
-import Label from "@/components/Label";
+import Button from "@/components/button";
+import Guest from "@/layouts/guest";
+import Input from "@/components/input";
+import Label from "@/components/label";
 import { useAuth } from "../context/authContext";
 import { useRouter } from "next/router";
 
