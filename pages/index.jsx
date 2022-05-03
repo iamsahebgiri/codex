@@ -1,7 +1,6 @@
 import React from "react";
 
 import Hero from "@/components/hero";
-
 import Nav from "@/components/nav";
 import AboutSection from "@/components/aboutSection";
 import FeaturesSection from "@/components/featuresSection";
