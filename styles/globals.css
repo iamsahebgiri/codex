@@ -6,3 +6,7 @@ html {
 
 @tailwind components;
 @tailwind utilities;
+
+.canvas-container div {
+  height: 21rem !important;
+}

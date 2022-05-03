@@ -11,6 +11,7 @@ import personFeedback20Filled from "@iconify/icons-fluent/person-feedback-20-fil
 import { Icon } from "@iconify/react";
 import { useRouter } from "next/router";
 import classNames from "@/utils/classnames";
+import TextCodexLogo from "./logoText";
 
 const NavItem = forwardRef(({ href, children, icon }, ref) => {
   const { pathname } = useRouter();
@@ -71,7 +72,7 @@ const Sidebar = () => {
         <div className="border-b h-16 flex">
           <Link href="/dashboard">
             <a className="flex items-center pl-2">
-              <ApplicationLogo className="h-6 mr-3 sm:h-7" />
+              <TextCodexLogo className="h-6 mr-3 sm:h-7" mode="dark" />
             </a>
           </Link>
         </div>
