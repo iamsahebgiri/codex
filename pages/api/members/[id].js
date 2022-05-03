@@ -3,7 +3,7 @@ import prisma from "libs/prisma";
 
 export default async function handle(req, res) {
   const memberId = req.query.id;
-  
+
   if (req.method === "GET") {
     handleGET(memberId, res);
   } else if (req.method === "DELETE") {
@@ -30,7 +30,10 @@ async function handleGET(memberId, res) {
 async function handlePATCH(memberId, data, res) {
   const user = await prisma.user.update({
     where: { id: memberId },
-    data,
+    data: {
+      ...data,
+      batch: Number(data.batch),
+    },
   });
   await admin.auth().updateUser(user.firebaseUid, {
     email: user.email,

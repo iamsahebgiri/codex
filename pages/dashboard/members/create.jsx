@@ -2,6 +2,7 @@ import Button from "@/components/button";
 import Dashboard from "@/layouts/dashboard";
 import axios from "axios";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 
@@ -10,6 +11,8 @@ export default function CreateMember() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const router = useRouter();
+
   const onSubmit = async (data) => {
     setError(null);
     setLoading(true);
@@ -17,6 +20,7 @@ export default function CreateMember() {
       .post("/api/members", data)
       .then((res) => {
         console.log(res);
+        router.push("/dashboard/members");
       })
       .catch((error) => {
         console.log(error.response.data);
@@ -219,7 +223,6 @@ export default function CreateMember() {
                         name="github"
                         id="github"
                         {...register("github")}
-                        autoComplete="address-level2"
                         className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
@@ -235,7 +238,6 @@ export default function CreateMember() {
                         name="linkedin"
                         id="linkedin"
                         {...register("linkedin")}
-                        autoComplete="address-level1"
                         className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                       />
                     </div>
