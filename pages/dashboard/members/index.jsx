@@ -67,7 +67,7 @@ export default function Members({ data }) {
                     </h2>
 
                     <p className="mt-4 text-sm text-gray-500">
-                      Created members will appear here, try addiong one!
+                      Created members will appear here, try adding one!
                     </p>
                   </div>
                 </td>
