@@ -1,7 +1,7 @@
 import React from "react";
 import Scene from "@/components/wobbleMesh";
 import { Canvas } from "@react-three/fiber";
-import { EffectComposer, Bloom } from "@react-three/postprocessing";
+// import { EffectComposer, Bloom } from "@react-three/postprocessing";
 import { OrbitControls } from "@react-three/drei";
 
 export default function Hero() {
@@ -21,12 +21,12 @@ export default function Hero() {
                       maxPolarAngle={Math.PI / 2}
                       minPolarAngle={Math.PI / 2}
                     />
-                    <EffectComposer>
+                    {/* <EffectComposer>
                       <Bloom
                         luminanceThreshold={0.5}
                         luminanceSmoothing={0.2}
                       />
-                    </EffectComposer>
+                    </EffectComposer> */}
                   </Canvas>
                 </div>
               </div>
